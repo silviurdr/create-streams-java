@@ -88,7 +88,11 @@ public class Streams {
          * HINT: You will need to create a new class for this.
          */
 
-//        Supplier<Integer> fibSupp = new Fibonacci();
-//        Stream<Integer> s6 = /* ??? */;
+
+        Supplier<Integer> fibSupp = new Fibonacci();
+        Stream<Integer> s6 = Stream.generate(fibSupp).limit(10);
+        s6.forEach(System.out::println);
+
+
     }
 }
